@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Rubik Solver</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato|Lobster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link rel="icon" href="img/icons/favicon.ico">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/modal.js"></script>
+
+</head>
+
+<body>
+
+	<div class="container" id="interfaz">
+
+		<div class="cubeContainer">
+
+			<div class="line">
+
+				<div class="face"></div>
+
+				<div class="face black">
+					<div class="cubie gray" id="1"></div>
+					<div class="cubie gray" id="2"></div>
+					<div class="cubie gray" id="3"></div>
+					<div class="cubie gray" id="4"></div>
+					<div class="center yellow" id="5"></div>
+					<div class="cubie gray" id="6"></div>
+					<div class="cubie gray" id="7"></div>
+					<div class="cubie gray" id="8"></div>
+					<div class="cubie gray" id="9"></div>
+				</div>
+
+				<div class="face"></div>
+				<div class="face"></div>
+
+			</div>
+
+			<div class="line">
+
+				<div class="face black">
+					<div class="cubie gray" id="37"></div>
+					<div class="cubie gray" id="38"></div>
+					<div class="cubie gray" id="39"></div>
+					<div class="cubie gray" id="40"></div>
+					<div class="center orange" id="41"></div>
+					<div class="cubie gray" id="42"></div>
+					<div class="cubie gray" id="43"></div>
+					<div class="cubie gray" id="44"></div>
+					<div class="cubie gray" id="45"></div>
+				</div>
+
+				<div class="face black">
+					<div class="cubie gray" id="19"></div>
+					<div class="cubie gray" id="20"></div>
+					<div class="cubie gray" id="21"></div>
+					<div class="cubie gray" id="22"></div>
+					<div class="center blue" id="23"></div>
+					<div class="cubie gray" id="24"></div>
+					<div class="cubie gray" id="25"></div>
+					<div class="cubie gray" id="26"></div>
+					<div class="cubie gray" id="27"></div>
+				</div>
+
+				<div class="face black">
+					<div class="cubie gray" id="10"></div>
+					<div class="cubie gray" id="11"></div>
+					<div class="cubie gray" id="12"></div>
+					<div class="cubie gray" id="13"></div>
+					<div class="center red" id="14"></div>
+					<div class="cubie gray" id="15"></div>
+					<div class="cubie gray" id="16"></div>
+					<div class="cubie gray" id="17"></div>
+					<div class="cubie gray" id="18"></div>
+				</div>
+
+				<div class="face black">
+					<div class="cubie gray" id="46"></div>
+					<div class="cubie gray" id="47"></div>
+					<div class="cubie gray" id="48"></div>
+					<div class="cubie gray" id="49"></div>
+					<div class="center green" id="50"></div>
+					<div class="cubie gray" id="51"></div>
+					<div class="cubie gray" id="52"></div>
+					<div class="cubie gray" id="53"></div>
+					<div class="cubie gray" id="54"></div>
+				</div>
+
+			</div>
+
+			<div class="line">
+
+				<div class="face"></div>
+
+				<div class="face black">
+					<div class="cubie gray" id="28"></div>
+					<div class="cubie gray" id="29"></div>
+					<div class="cubie gray" id="30"></div>
+					<div class="cubie gray" id="31"></div>
+					<div class="center white" id="32"></div>
+					<div class="cubie gray" id="33"></div>
+					<div class="cubie gray" id="34"></div>
+					<div class="cubie gray" id="35"></div>
+					<div class="cubie gray" id="36"></div>
+				</div>
+
+				<div class="face"></div>
+
+				<div class="face"></div>
+
+			</div>
+
+		</div>
+
+		<div class="controlsContainer">
+			<h3>Seleccione un color</h3>
+			<div class="colores">
+				<div class="color yellow" data-value="1"></div>
+				<div class="color orange" data-value="2"></div>
+				<div class="color blue" data-value="3"></div>
+				<div class="color red" data-value="4"></div>
+				<div class="color green" data-value="5"></div>
+				<div class="color white" data-value="6"></div>
+			</div>
+
+			<h3>Color seleccionado: <span id="colorSelect"></span></h3>
+
+			<div class="contBotones">
+				
+				<div class="contBtn left">
+					<button type="button" id="reset">Resetear</button>
+				</div>
+				
+				<div class="contBtn right">
+					<button type="button" id="random">Aleatorio</button>
+				</div>
+
+			</div>
+			
+			<div class="contBotones">
+				<div class="contBtnSolve">
+					<button type="button" id="solve">Resolver</button>
+				</div>
+			</div>
+
+			<div class="contSolucion">
+				<p id="solucionTitulo"></p>
+				<p id="solucion"></p>
+
+				<button type="button" id="translate">Traducir</button>
+			</div>
+		</div>
+
+	</div>
+
+	<div class = "bg-modal" id = "modal">
+
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h4>Solución</h4>
+				<div class="modal-close" id="close"><ion-icon name="close-outline"></ion-icon></div>
+			</div>
+
+			<div class="modal-text">
+				<p id = "solucionTraducida"></p>
+			</div>
+
+			<a href="instructivo.html">Guia de Uso</a>
+				
+		</div>
+	</div>
+
+	<footer>
+		<p>
+			<a href="https://github.com/ldez/cubejs">Cube.js</a> fue desarrollada por Petri Lehtinen.<br>
+			Aplicación desarrollada por Franco Cipolla, como parte de su tesina
+		</p>
+	</footer>
+
+	<!-- <script src="js/jquery.min.js"></script> -->
+    <script src="js/lib/cube.js"></script>
+    <script src="js/lib/solve.js"></script>
+    <script src="js/resolver.js"></script>
+    <script src="js/colores.js"></script>
+    <script src="js/lib/async.js"></script>
+    <!-- <script src="js/lib/worker.js"></script> -->
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</body>
+</html>

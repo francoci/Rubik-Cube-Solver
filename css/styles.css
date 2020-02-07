@@ -1,0 +1,397 @@
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+	padding: 0;
+}
+
+body {
+	background-color: #79a3a3;
+}
+
+/*Estilos barra de navegacion lateral*/
+
+::-webkit-scrollbar
+{
+	width: 15px;
+	background-color: #6e8f8e;
+	opacity: 0.7;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #6e8f8e;
+	opacity: 0.7;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #3f5454;
+	opacity: 0.7;
+}
+
+/*Div contenedora*/
+
+.container {
+	width: 1200px;
+	height: 600px;
+	margin: 50px auto;
+	padding: 25px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+/*Estilos index.html*/
+
+.contBtnInicio {
+	width: 30%;
+	height: 60px;
+	margin: 200px auto;
+}
+
+.contBtnInicio a {
+	display: inline-block;
+	margin: 0 0 0 0.7em;
+
+	width: 42%;
+	height: 100%;
+	border-radius: 10px;
+
+	text-decoration: none;
+	background-color: #678a8a; 
+	color: #e3e3e3;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.4em;
+	text-align: center;
+
+	line-height: 55px;
+	vertical-align: middle;
+}
+
+
+/*Estilos home.html*/
+/*Contenedor area de controles*/
+.controlsContainer {
+	width: 33%;
+	height: 100%;
+	float: right;
+}
+
+/*Contenedor diagrama del cubo*/
+.cubeContainer {
+
+	width: 65%;
+	height: 100%;
+	float: left;
+}
+
+/*El diagrama del cubo esta formado por tres lineas horizantales. Cada una de las cuales 
+tiene tres caras del cubo. En la primer y ultima linea, la primer y ultima cara están escondidas.
+De esa forma, se genera la forma del cubo descompuesto en forma de plano.*/
+.line {
+
+	width: 100%;
+	height: 33%;
+	overflow: hidden;
+	box-sizing: border-box;
+	margin: 0 0 0.5em 0;
+}
+
+/*Cara del cubo*/
+.face {
+	width: 24%;
+	height: 100%;
+	display: inline-block;
+	padding: 0.4em 0.2em 0.2em 0.4em;
+	margin: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+/*Cubie. Los cubies con la clase center son los centrales a cada cara*/
+.cubie, .center {
+	width: 31%;
+	height: 31%;
+	display: inline-block;
+	margin: 0;
+}
+
+.cubie {
+	cursor: pointer;
+}
+
+/*Cambiamos el cursor para evitar que la persona intente clickear*/
+.center {
+	cursor: default;
+}
+
+/*Colores usados en los cubies y demás lugares*/
+.blue {
+	background-color: #5c63e6;
+}
+
+.yellow {
+	background-color: #e8eb36;
+}
+
+.red {
+	background-color: #e84220;
+}
+
+.green {
+	background-color: #4bbf39;
+}
+
+.orange {
+	background-color: #e8a438;
+}
+
+.white {
+	background-color: #f0f0f0;
+}
+
+.black {
+	background-color: #212224;
+}
+
+.gray {
+	background-color: #8d8d99;
+}
+
+/*Contenedor de los botones de seleccionar color*/
+.colores {
+	width: 90%;
+	height: 40px;
+	margin: 0.5em auto;
+	text-align: right;
+}
+
+/*Boton individual de color*/
+.color {
+	width: 12%;
+	height: 100%;
+	border: 4px solid #5f5f66;
+	display: inline-block;
+	margin-left: 0.2em;
+	cursor: pointer;
+}
+
+.color:hover {
+	box-shadow: 0 0 7px black;
+	transition: 0.5s ease;
+}
+
+h3 {
+
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	font-size: 1.5em;
+	color: #3f6161;
+	text-align: center;
+}
+
+
+/*Contenedores para los demás botones, reset, aleatorio, resolver, etc.*/
+.contBotones {
+	width: 80%;
+	height: 60px;
+	margin: 0.5em auto;
+	padding: 0.4em;
+	box-sizing: border-box;
+}
+
+.contBtn {
+	width: 45%;
+	height: 50px;
+	display: inline-block;
+}
+
+.contBtnSolve {
+	width: 50%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+/*Botones varios. Aleatorio, reset, resolver, traducir y el boton del modal*/
+.contBtn button, .contBtnSolve button, #translate, .modal-content a  {
+	width: 100%;
+	height: 100%;
+
+	border: none;
+	border-radius: 5px;
+
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-weight: 900;
+	font-size: 1.5em;
+	color: #e3e3e3;
+
+	background-color: #678a8a;
+	cursor: pointer;
+}
+
+#translate {
+	width: 40%;
+	height: 50px;
+
+	display: block;
+	margin: 0 auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/*Estilo de hover para los diversos botones*/
+.contBtn button:hover, .contBtnSolve button:hover, #translate:hover, .modal-content a:hover, .contBtnInicio a:hover {
+	background-color: #577575;
+	transition: 0.5s ease;
+}
+
+/*Contenedor donde se colocara la solución*/
+.contSolucion {
+	width: 90%;
+	height: 200px;
+	margin: 0.5em auto;
+	padding: 0.5em;
+}
+
+/*Texto de la solucion*/
+.contSolucion p, #solucion {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.5em;
+	font-weight: 900;
+	color: #3f6161;
+	margin: 0.2em auto;
+}
+
+.contSolucion p {
+	text-align: center;
+	width: 70%;
+}
+
+
+/*Estilos modal*/
+/*Fondo*/
+.bg-modal{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Para esconder y revelar el modal*/
+.hide {
+	display: none !important;
+}
+
+/*El modal en si*/
+.modal-content {
+	width: 500px;
+	height: 450px;
+	background-color: white;
+	border-radius: 15px;
+	padding: 0;
+	position: relative;
+}
+
+/*Encabezado del modal, contiene el titulo y el botón para cerrarlo*/
+.modal-header {
+	width: 100%;
+	height: 80px;
+	background-color: rgb(71, 94, 94);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+/*Titulo del modal*/
+.modal-header h4 {
+
+	font-family: 'Lobster', cursive;
+	font-size: 2.5em;
+	color: #e3e3e3;
+	text-shadow: -1px 1px 2px black;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	line-height: 70px;
+	vertical-align: middle;
+}
+
+/*Boton de cerrado del modal*/
+.modal-close {
+	position: absolute;
+	top: 20px;
+	left: 450px;
+	color: #e3e3e3;
+	font-size: 2em;
+	font-weight: bold;
+	text-shadow: -1px 1px 2px black;
+	cursor: pointer;
+}
+
+.modal-close:hover, footer p a:hover {
+	color: #56b0b0;
+	transition: 0.5s ease;
+}
+
+/*Contenido en sí del modal, el texto.*/
+.modal-text {
+	width: 80%;
+	height: 250px;
+	overflow: scroll;
+	overflow-x: hidden;
+	margin: 1em auto;
+}
+
+.modal-text p {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2em;
+	font-weight: 900;
+	color: #3f6161;
+}
+
+/*Boton para guia de uso*/
+.modal-content a {
+	display: block;
+	margin: 0.5em auto;
+	padding: 0.2em;
+
+	width: 30%;
+	height: 50px;
+
+	text-decoration: none;
+
+	line-height: 45px;
+	vertical-align: middle;
+}
+
+
+/*Estilos del footer*/
+
+footer {
+	width: 100%;
+	height: 120px;
+	background-color: rgb(71, 94, 94);
+	padding: 1em 2em;
+	box-sizing: border-box;
+}
+
+footer p, footer p a {
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	color: #e3e3e3;
+	text-align: center;
+	text-decoration: none;
+}

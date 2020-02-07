@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Rubik Solver</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Lato|Lobster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylesInstructivo.css">
+
+	<link rel="icon" href="img/icons/favicon.ico">
+
+	<script src="js/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<h2>Modo de uso</h2>
+	
+	<section>
+		<div class="container">
+			
+			<div class="accordion">
+				
+				<div class="accordion-item" id="caso1">
+
+					<a href="#caso1" class = "accordion-link">
+						Resolver cubos previamente desordenados
+						<ion-icon name="chevron-down-outline" class = "down"></ion-icon>
+						<ion-icon name="chevron-up-outline" class = "up"></ion-icon>
+					</a>
+
+					<div class="answer">
+						<ol>
+							<li>Cada cara del cubo Rubik tiene un color asignado. Identifique el color de las mismas tomando como referencia el 'cubie' que se encuentra en el centro de cada cara.</li>
+							<li>Oriente su cubo de manera que la cara frontal sea la azul, y la superior la amarilla.</li>
+							<li>Seleccione un color, haciendo click en el mismo en el panel de la derecha.</li>
+							<li>Basándose en su cubo, proceda a pintar los 'cubies' de cada cara, clickeando sobre los mismos.</li>
+							<li>Haga click en el botón 'Resolver'.</li>
+						</ol>
+					</div>	
+
+				</div>
+
+				<div class="accordion-item" id="caso2">
+
+					<a href="#caso2" class = "accordion-link">
+						Generar cubos aleatorios
+						<ion-icon name="chevron-down-outline" class = "down"></ion-icon>
+						<ion-icon name="chevron-up-outline" class = "up"></ion-icon>
+					</a>
+
+					<div class="answer">
+						<ol>
+							<li>Haga click en el botón 'Random'.</li>
+							<li>Haga click en 'Resolver'.</li>
+						</ol>
+					</div>	
+					
+				</div>
+
+				<div class="accordion-item" id="caso3">
+
+					<a href="#caso3" class = "accordion-link">
+						Notación de la resolución
+						<ion-icon name="chevron-down-outline" class = "down"></ion-icon>
+						<ion-icon name="chevron-up-outline" class = "up"></ion-icon>
+					</a>
+					
+					<div class="answer">
+						<p>La notación usada en la resolución es la notación Singmaster. La siguiente es una breve explicación de la misma.<br><br>Cada cara tiene asignada una letra, a saber: <br><br>
+
+						- Cara frontal (Front)  -->  F (Azul)<br>
+						- Cara trasera (Back)  -->  B (Verde)<br>
+						- Cara superior (Up)  -->  U (Amarilla)<br>
+						- Cara inferior (Down)  -->  D (Blanca)<br>
+						- Cara derecha (Right)  -->  R (Roja)<br>
+						- Cara izquierda (Left)  --> L (Naranja)<br><br>
+
+						La aplicación toma como cara frontal la cara azul y como superior, la amarilla (Ver listado para las demás).
+						<br><br>Cada movimiento tiene asignada una cara, una cantidad de giros (90° o 180°) y una dirección (horaria o anti-horaria).<br><br>
+
+						Un giro simple (90°) se denota de la siguiente manera: <br><br>
+				
+						<i>- Letra identificatoria de cara. Para un giro anti-horario, se agrega un apostrofe tras la letra.</i><br><br>
+
+						F  --> Giro cara frontal (Azul) de 90° en sentido horario.<br>
+					    F ' --> Giro cara frontal (Azul) de 90° en sentido anti-horario.<br><br>
+
+					    Un giro doble (180°) se denota de la siguiente manera:<br><br>
+				
+						<i>- Letra identificatoria de cara, seguida del número 2. Para un giro anti-horario, se agrega un apostrofe tras la letra.</i><br><br>
+
+				  		B2  -> Giro cara trasera (Verde) de 180° en sentido horario.<br>
+			            B2' -> Giro cara trasera (Verde) de 180° en sentido anti-horario.<br><br>
+
+
+						Cada movimiento se concatena en la resolución, por EJ: F B' R2 D2' implica un giro simple horario de la cara frontal, un giro simple anti-horario de la cara trasera, un giro doble horario de la cara derecha y un giro doble anti-horario de la cara inferior.
+						</p>
+					</div>	
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>
