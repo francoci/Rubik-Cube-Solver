@@ -61,6 +61,7 @@ Un giro doble (180°) se denota de la siguiente manera:
 Cada movimiento se concatena en la resolución, por EJ: F B' R2 D2' implica un giro simple horario de la cara frontal, un giro
 simple anti-horario de la cara trasera, un giro doble horario de la cara derecha y un giro doble anti-horario de la cara inferior.
 
+------------------------------------------------------------------------------------------------------------------------------------
 
 Cube.js fue desarrollada por Petri Lehtinen y el acceso y utilización de la misma se da dentro del contexto de la licencia MIT. El texto a continuación se corresponde con el de la licencia.
 
