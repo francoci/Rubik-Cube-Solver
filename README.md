@@ -47,7 +47,7 @@ Un giro simple (90°) se denota de la siguiente manera:
 	- letra identificatoria de cara. Para un giro anti-horario, se agrega un apostrofe tras la letra.
 
 	  EJ: F  -> Giro cara frontal (Azul) de 90° en sentido horario.
-        F' -> Giro cara frontal (Azul) de 90° en sentido anti-horario.
+              F' -> Giro cara frontal (Azul) de 90° en sentido anti-horario.
 
 
 Un giro doble (180°) se denota de la siguiente manera: 
@@ -55,7 +55,7 @@ Un giro doble (180°) se denota de la siguiente manera:
 	- letra identificatoria de cara, seguida del número 2. Para un giro anti-horario, se agrega un apostrofe tras la letra.
 
 	  EJ: B2  -> Giro cara trasera (Verde) de 180° en sentido horario.
-        B2' -> Giro cara trasera (Verde) de 180° en sentido anti-horario.
+              B2' -> Giro cara trasera (Verde) de 180° en sentido anti-horario.
 
 
 Cada movimiento se concatena en la resolución, por EJ: F B' R2 D2' implica un giro simple horario de la cara frontal, un giro
